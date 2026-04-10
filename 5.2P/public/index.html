@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Books Catalog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Books Catalog</h1>
+    <p class="subtitle">Simple MVC Books App</p>
+    <div id="booksList">Loading books...</div>
+  </div>
+
+  <script>
+    const booksList = document.getElementById('booksList');
+
+    function renderBooks(items) {
+      booksList.innerHTML = '';
+
+      if (!Array.isArray(items) || items.length === 0) {
+        booksList.textContent = 'No books found.';
+        return;
+      }
+
+      items.forEach((book) => {
+        const card = document.createElement('div');
+        card.className = 'book-card';
+
+        const title = document.createElement('h3');
+        title.textContent = book.title;
+
+        const author = document.createElement('p');
+        author.textContent = `Author: ${book.author}`;
+
+        card.appendChild(title);
+        card.appendChild(author);
+        booksList.appendChild(card);
+      });
+    }
+
+    async function loadBooks() {
+      try {
+        const response = await fetch('/api/books');
+        if (!response.ok) {
+          throw new Error('Failed to fetch books');
+        }
+
+        const result = await response.json();
+        renderBooks(result.data);
+      } catch (error) {
+        booksList.textContent = 'Error fetching books.';
+        console.error(error);
+      }
+    }
+
+    loadBooks();
+  </script>
+</body>
+</html>
