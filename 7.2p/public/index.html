@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hairdresser Live Queue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Finding Hairdresser</h1>
+    <h2>Live Salon Queue Status</h2>
+
+    <div class="card">
+      <p><strong>Customers waiting:</strong></p>
+      <h1 id="queueCount">0</h1>
+      <p id="status">Connecting to server...</p>
+    </div>
+
+    <div class="form-card">
+      <h3>Add New Booking</h3>
+
+      <input type="text" id="customerName" placeholder="Enter customer name">
+
+      <select id="service">
+        <option>Haircut</option>
+        <option>Hair Colouring</option>
+        <option>Beard Trim</option>
+        <option>Hair Styling</option>
+      </select>
+
+      <button onclick="addBooking()">Join Queue</button>
+      <button onclick="serveCustomer()">Serve Customer</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
