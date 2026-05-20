@@ -12,7 +12,7 @@ const sampleBooks = [
     author: 'Liu Cixin',
     year: 2008,
     genre: 'Science Fiction',
-    summary: 'A science fiction novel about humanity making contact with an alien civilisation.',
+    summary: 'The Three-Body Problem is the first novel in the Remembrance of Earth’s Past trilogy. The series portrays a fictional past, present, and future wherein Earth encounters an alien civilisation from a nearby system of three Sun-like stars orbiting one another, a representative example of the three-body problem in orbital mechanics.',
     price: '29.99',
     currency: 'AUD'
   },
@@ -21,8 +21,8 @@ const sampleBooks = [
     title: 'Jane Eyre',
     author: 'Charlotte Bronte',
     year: 1847,
-    genre: 'Classic Fiction',
-    summary: 'A novel about the life, struggles, and independence of Jane Eyre.',
+    genre: 'Classic',
+    summary: 'An orphaned governess confronts class, morality, and love at Thornfield Hall.',
     price: '22.00',
     currency: 'AUD'
   },
@@ -31,8 +31,8 @@ const sampleBooks = [
     title: 'Pride and Prejudice',
     author: 'Jane Austen',
     year: 1813,
-    genre: 'Romance',
-    summary: 'A classic novel about love, class, and family in early 19th century England.',
+    genre: 'Classic',
+    summary: 'Elizabeth Bennet and Mr. Darcy navigate pride, judgement, and social expectations in a sharp study of manners and marriage.',
     price: '22.00',
     currency: 'AUD'
   },
@@ -42,7 +42,7 @@ const sampleBooks = [
     author: 'Michael Ondaatje',
     year: 1992,
     genre: 'Historical Fiction',
-    summary: 'A novel set during World War II focusing on identity, memory, and loss.',
+    summary: 'In a ruined Italian villa at the end of WWII, four strangers with intersecting pasts confront memory, identity, and loss.',
     price: '25.39',
     currency: 'AUD'
   },
@@ -52,7 +52,7 @@ const sampleBooks = [
     author: 'Terry Pratchett',
     year: 1992,
     genre: 'Fantasy',
-    summary: 'A humorous fantasy novel exploring religion, belief, and philosophy.',
+    summary: 'Tiny Pratchett’s humanity? Its comic, you got Om turned as a tortoise, and novice Brutha must confront dogma, empire, and the nature of belief.',
     price: '31.99',
     currency: 'AUD'
   }
